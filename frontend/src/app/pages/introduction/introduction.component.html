@@ -1,0 +1,134 @@
+<!-- Introduction Component -->
+<div [@fadeIn]>
+<div class="outer-container">
+  <div class="content-container">
+    <aside class="sidebar">
+      <img src="assets/profile-picture.png" alt="Marton Praczki" class="profile-picture">
+      <h1 class="sidebar-name">Marton Praczki</h1>
+      <p class="tagline">Your quick fix for everything IT</p>
+      <p class="location">Currently based in: Budapest</p>
+      <div class="social-links-container">
+        <a href="https://www.linkedin.com/in/praczki/" target="_blank">
+          <img src="assets/ln.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/yondaein135" target="_blank">
+          <img src="assets/git.png" alt="GitHub">
+        </a>
+        <a href="https://leetcode.com/yondaein135/" target="_blank">
+          <img src="assets/leetcode.png" alt="LeetCode">
+        </a>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="greeting-container">
+        <div class="greeting-placeholder">
+          <div *ngIf="showGreeting" [@animationFadeIn] class="greeting">
+            {{ currentGreeting }}
+          </div>
+        </div>
+      </div>
+      <div class="intro-highlight">
+        <p>If you want to get straight to business, these are the buttons for you:</p>
+      </div>
+      <div class="button-container">
+        <button class="button-solid" routerLink="/resume">RESUME</button>
+        <button class="button-outline" routerLink="/projects">PROJECTS</button>
+      </div>
+      <div class="intro-highlight">
+        <p>...but if you just want to know a bit more about me please feel free to scroll on!</p>
+      </div>
+      <div class="additional-info">
+        <p>First of all, thanks for taking a look! If you are interested in working together, please go ahead and look through some of the things I worked on or all the pieces of papers with shiny stamps on them that I collected during the last decade.</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+<hr class="section-divider" />
+
+<!-- How Section -->
+<div class="section-container">
+  <div class="content-container">
+    <h1 class="section-title">How?</h1>
+    <div class="subsection">
+      <p>So how will I help you figure out your business solutions?</p>
+      <p>I am far from claiming that I know the answers to all of life's questions, however I am pretty good in looking for them.
+          When it comes to partial problems (errors, syntax, etc.), I pride myself in my Google-Fu. For more complex issues where I need to learn an entire domain from the ground up,
+          I just grab my Coursera account and find an appropriate course to get my basics up to date. If you need me to find out what is the current state of the art within an industry, I will just jump in the middle of the academic literature using Google Scholar or arXiv and grab the latest literature for you.</p>
+
+      <p>I am trying to keep a good track of the topics I already covered during my research. If you are interested in them, take a look at my progress below:</p>
+      <div class="button-container">
+        <button class="button-solid" routerLink="/certificates">CERTIFICATES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider" />
+
+<!-- Looking for Section -->
+<div class="section-container">
+  <div class="content-container">
+    <h1 class="section-title">What I'm Looking For</h1>
+    <div class="subsection">
+      <p class="subparagraph">I believe that symmetry and transparency makes everything better, so I should describe what conditions I am looking for. Below you will see examples of what I would like to see in the next stage of my career, which will hopefully help you decide whether we are the right match.</p>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span style="font-weight:bold;" >What topics would I be interested to work on?</span></p>
+
+        <ul  style="font-size:17px;">
+          <li style="line-height:1.5em;" >
+            <p  class="subparagraph">Education / Learning</p>
+          </li>
+          <li style="line-height:1.5em;" >
+            <p  class="subparagraph">Healthcare / Biotechnology</p>
+          </li>
+          <li style="line-height:1.5em;" >
+            <p  class="subparagraph">Artificial Intelligence</p>
+          </li>
+        </ul>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span style="font-weight:bold;" >Next, here are the tasks I would like to spend the majority of my days with:</span></p>
+
+        <ul  style="font-size:17px;">
+          <li style="line-height:1.5em;" >
+            <p  class="subparagraph">Coding</p>
+          </li>
+          <li style="line-height:1.5em;" >
+            <p  class="subparagraph">Research</p>
+          </li>
+          <li style="line-height:1.5em;" >
+            <p  class="subparagraph">Architecture Design</p>
+          </li>
+        </ul>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span style="font-weight:bold;" >Preferred work environment?</span></p>
+
+        <p  class="subparagraph">I prefer a quiet and calm environment for work so I am all for remote-first.</p>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span style="font-weight:bold;" >Preferred language?</span></p>
+
+        <p  class="subparagraph">English by far. I prefer working in an international environment as this is what I am most used to. While I get by with Hungarian and Korean, I would much rather work in a global workspace.</p>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span style="font-weight:bold;" >Regarding employee growth:</span></p>
+
+        <p  class="subparagraph">Learning is really important to me. If an employer can demonstrate that I will have chances to receive trainings, have access to education platforms, or compete in challenges within the organization during downtime, I will certainly chose them over other companies.</p>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span >​</span></p>
+
+        <p  class="subparagraph"><span >​</span></p>
+    </div>
+  </div>
+</div>
+</div>

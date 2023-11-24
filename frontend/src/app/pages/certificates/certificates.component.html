@@ -1,0 +1,45 @@
+<div class="certificates-container">
+  <!-- Header -->
+  <header class="courses-header">
+    <div class="header-content">
+      <div class="blue-square"></div>
+      <h1>Courses</h1>
+    </div>
+  </header>
+
+  <!-- Topic Filter -->
+  <button class="topic-button reset-button" (click)="resetFilter()">Reset</button>
+
+  <div class="topics-filter-container" [@fadeIn]>
+    <button class="topic-button" *ngFor="let topic of topics" (click)="filterByTopic(topic)" [class.active]="selectedTopic === topic">
+      {{ topic }}
+    </button>
+  </div>
+
+  <table class="courses-table" >
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Institution</th>
+      <th>Hours</th>
+      <th>Creator</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let course of filteredCourses;">
+      <td>{{ course.Title }}</td>
+      <td>{{ course.IssuingInstitution }}</td>
+      <td>{{ course.Hours }}</td>
+      <td>{{ course.Creator }}</td>
+    </tr>
+    </tbody>
+
+  </table>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-controls">
+    <button (click)="changePage(-1)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button (click)="changePage(1)" [disabled]="isNextDisabled()">Next</button>
+  </div>
+</div>

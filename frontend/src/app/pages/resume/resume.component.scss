@@ -1,0 +1,351 @@
+$timeline-width: 2px;
+$date-label-offset: 100px;
+$card-height: 200px;
+$card-margin-bottom: 20px;
+$card-vertical-center: $card-height / 2 - $card-margin-bottom / 2;
+$base-color: #004a99;
+
+.resume-container {
+  padding: 2rem;
+
+  .resume-header {
+    text-align: center;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blue-square {
+      background-color: #004a99;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+  }
+
+  .section-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    section {
+      width: 80%;
+      max-width: 800px;
+
+      h3 {
+        align-items: center;
+        font-size: 1.8rem;
+        display: inline-block;
+        position: relative;
+      }
+    }
+
+    .work-experience {
+      .timeline-container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .timeline-line {
+        position: absolute;
+        left: 10%;
+        height: 100%;
+        width: $timeline-width;
+        background-color: #004a99;
+      }
+
+      .cards-container {
+        min-width: 600px;
+        width: 80vh;
+        padding-left: 15%;
+        display: flex;
+        flex-direction: column;
+
+        .date-label {
+          position: absolute;
+          white-space: nowrap;
+          z-index: 2;
+          left: -20%;
+          text-align: left;
+          transform: translateY(-50%);
+          top: 50%;
+        }
+
+        .experience-card {
+          position: relative;
+          background-color: white;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          margin-bottom: 20px;
+          width: calc(100% - 30px);
+          min-height: 200px;
+          max-height: 1000px;
+
+          .card-content-container {
+            display: flex;
+            text-align: center;
+            position: relative;
+            justify-content: space-between;
+
+            .job-info-container {
+              align-items: flex-start;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin-right: 20px;
+              width: 200px;
+              max-width: 200px;
+
+
+              .company-logo-container a img:hover {
+                text-align: center;
+                transform: scale(1.1);
+              }
+
+              .job-details-container {
+                text-align: left;
+
+                p {
+                  font-size: 0.9rem;
+                }
+              }
+            }
+
+            .summary-container {
+              flex: 1;
+              text-align: left;
+              font-size: 0.9rem;
+
+              ul {
+                list-style-type: none;
+
+                li {
+                  font-weight: 650;
+                  color: white;
+                  padding: 5px 0;
+                  position: relative;
+                }
+              }
+            }
+          }
+
+          p {
+            font-weight: 650;
+            color: white;
+          }
+
+
+          .skills-toggle-btn {
+            padding-top: 30px;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            height: 30px;
+            width: 100%;
+            z-index: 15;
+            color: white;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center; // This centers the text and image inside the button
+            flex-direction: column; // Stacks the text and image on top of each other
+            background-color: white;
+            font-weight: bold;
+
+
+            .toggle-icon {
+              width: 20px; // Set the width of your icon
+              height: auto; // Maintain aspect ratio
+              margin-top: 5px; // Add space between the text and the icon
+            }
+
+
+            &:hover {
+              background-color: darken(#004a99, 10%);
+            }
+          }
+
+          .skills-list {
+            position: relative;
+            padding-top: 20px;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            overflow: hidden;
+            visibility: hidden;
+            z-index: 20;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center; // This centers the text and image inside the button
+            flex-direction: column;
+
+            &.open {
+              visibility: visible;
+              opacity: 1;
+              height: auto;
+            }
+
+            .skills-logos-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center; // Center logos in the container
+              gap: 10px; // Space between logos
+              .skill-logo {
+                width: calc(25% - 10px); // Adjust for 4 logos per row
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                  //max-width: 100%; // Ensure the image fits within the container
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    .education {
+      .universities-container {
+
+        display: flex;
+
+        justify-content: center;
+
+        .university-details-container {
+          min-width: 100px;
+          align-items: center; // Center vertically
+          text-align: center;
+
+          margin-right: 50px;
+          margin-left: 50px;
+          padding-right: 15px;
+          padding-left: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+
+          .university-logo-link {
+            justify-content: center; // Center horizontally
+            align-items: center; // Center vertically
+
+
+            .university-logo {
+              width: 100px; // Fixed width for the image
+              height: 100px; // Fixed height for the image
+              object-fit: contain; // Maintain aspect ratio without stretching
+            }
+
+            .univeristy-logo-container a img:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          .university-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8rem;
+            max-height: 180vh;
+
+            .program-name {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .languages {
+      .languages-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+
+        .language {
+          margin-bottom: 1rem;
+
+          h4 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+
+          .proficiency-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 40vh;
+            max-width: 600px;
+
+            .proficiency {
+              height: 100%;
+              border-radius: 5px;
+
+              &.fluent {
+                width: 100%;
+                background-color: green;
+              }
+
+              &.medium {
+                width: 60%;
+                background-color: orange;
+              }
+
+              &.casual {
+                width: 30%;
+                background-color: blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.company-logo {
+  width: auto;
+  max-width: 130px;
+  height: auto;
+  max-height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: block;
+}
+
+
+@keyframes slideDown {
+  from {
+    transform: scaleY(0);
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    height: auto;
+    opacity: 1;
+  }
+}
+

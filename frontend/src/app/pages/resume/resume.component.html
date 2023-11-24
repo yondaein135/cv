@@ -1,0 +1,118 @@
+<div>
+  <div class="resume-container">
+    <!-- Header -->
+    <header class="resume-header">
+      <div class="header-content">
+        <div class="blue-square"></div>
+        <h1>Resume</h1>
+      </div>
+    </header>
+
+    <!-- Work Experience -->
+    <div class="section-container" [@fadeIn]>
+      <section class="work-experience">
+        <h3>Work Experience</h3>
+        <div class="timeline-container" [@fadeIn]>
+          <div class="timeline-line"></div>
+          <div class="cards-container">
+            <div class="experience-card" *ngFor="let experience of experiences; let i = index"
+                 [ngStyle]="getCardStyle(i)"
+                 [@fadeIn]>
+              <div class="card-content-container">
+                <div class="job-info-container">
+                  <div class="date-label">{{ experience.duration+"..." }}</div>
+                  <div class="company-logo-container">
+                    <a href="{{ experience.companyUrl }}" target="_blank">
+                      <img src="{{ experience.logoUrl }}" alt="{{ experience.company }}" class="company-logo">
+                    </a>
+                  </div>
+                  <div class="job-details-container">
+                    <p class="role">{{ experience.role }}</p>
+                    <p class="location">{{ experience.location }}</p>
+                  </div>
+                </div>
+                <div class="summary-container">
+                  <ul>
+                    <li *ngFor="let point of experience.summaryPoints">{{ point }}</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Skills Toggle Button -->
+              <div class="skills-container">
+                <button class="skills-toggle-btn"
+                        [class.open]="experience.showSkills"
+                        (click)="toggleSkills(experience)"
+                        [ngStyle]="getCardStyle(i)">
+                  SKILLS
+                  <img src="assets/icons/down-arrow.png" alt="Toggle" class="toggle-icon">
+                </button>
+                <div class="skills-list" [@slideVertical]="experience.showSkills ? 'open' : 'closed'">
+                  <div class="skills-logos-container">
+                    <div *ngFor="let skill of experience.skills" class="skill-logo">
+                      <img src="{{ skill.logoUrl }}" alt="{{ skill.name }}" title="{{ skill.name }}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Education -->
+    <div class="section-container" #educationSection>
+      <section class="education">
+        <h3>Education</h3>
+        <div class="universities-container" [@fadeIn]>
+          <div *ngFor="let uni of education" class="university-details-container">
+            <div class="university-logo-container">
+              <a href="{{ uni.url }}" target="_blank" title="{{ uni.name }}" class="university-logo-link">
+              <img src="{{ uni.logoUrl }}" alt="{{ uni.name }}" class="university-logo">
+              </a>
+            </div>
+            <div class="university-info">
+              <p class="program-name">{{ uni.program }}</p>
+              <p class="university-achievement">{{uni.achievement}}</p>
+              <p class="university-duration">{{ uni.duration }}</p>
+              <p class="university-location">{{ uni.location }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Languages -->
+    <div class="section-container">
+      <section class="languages">
+        <h3>Languages</h3>
+        <div class="languages-container">
+          <div class="language">
+            <h4>English</h4>
+            <div class="proficiency-bar">
+              <div class="proficiency fluent"></div>
+            </div>
+          </div>
+          <div class="language">
+            <h4>Hungarian</h4>
+            <div class="proficiency-bar">
+              <div class="proficiency fluent"></div>
+            </div>
+          </div>
+          <div class="language">
+            <h4>Korean</h4>
+            <div class="proficiency-bar">
+              <div class="proficiency medium"></div>
+            </div>
+          </div>
+          <div class="language">
+            <h4>French</h4>
+            <div class="proficiency-bar">
+              <div class="proficiency casual"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

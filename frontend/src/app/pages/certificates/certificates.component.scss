@@ -1,0 +1,110 @@
+.courses-header {
+  text-align: center;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blue-square {
+    background-color: #004a99;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+}
+
+.certificates-container {
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  .reset-button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #af46af; // Example: red color for reset
+    &:hover {
+      background-color: darken(#f44336, 10%);
+    }
+  }
+  .topics-filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .topic-button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background-color: #004a99;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover, &.active {
+        background-color: darken(#004a99, 10%);
+      }
+
+    }
+  }
+
+  .courses-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f8f9fa;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+      background-color: #ddd;
+    }
+  }
+
+  .pagination-controls {
+    margin-top: 20px;
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      background-color: #004a99;
+      color: white;
+      border: none;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

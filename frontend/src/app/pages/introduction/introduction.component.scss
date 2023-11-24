@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Avenir:wght@300&display=swap');
+
+* {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.content-container {
+  max-width: 1000px;
+  min-width: 400px;
+  width: 90vh;
+  display: flex;
+  background-color: #ffffff;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.sidebar {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  position: relative;
+  background-color: #004a99;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 30vh;
+}
+
+.profile-picture {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+}
+
+.sidebar-name {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+}
+
+.location {
+  font-size: 0.65rem;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.social-links-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.social-links-container a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-links-container a img {
+  height: 24px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.social-links-container a img:hover {
+  transform: scale(1.1);
+}
+
+.main-content {
+  background-color: white;
+  padding: 2rem;
+}
+
+.greeting-container .greeting-placeholder {
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting-container .greeting-placeholder .greeting {
+  font-size: 2rem;
+}
+
+.intro-highlight p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.additional-info p {
+  font-size: 0.8rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.button-container .button-solid {
+  background-color: #004a99;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-container .button-solid:hover {
+  background-color: darken(#004a99, 10%);
+  transform: scale(1.05);
+}
+
+.button-container .button-outline {
+  background-color: transparent;
+  color: #004a99;
+  border: 2px solid #004a99;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.button-container .button-outline:hover {
+  color: white;
+  background-color: #004a99;
+  border-color: #004a99;
+}
+
+.section-divider {
+  border: none;
+  height: 5px;
+  background-color: #004a99;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+.subsection {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.subparagraph{
+  line-height: 1.5em;
+  font-size:17px;
+}
+
+@media (max-width: 768px) {
+  .outer-container {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .button-container button {
+    margin: 10px;
+  }
+}

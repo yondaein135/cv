@@ -1,0 +1,77 @@
+.site-header {
+  min-width: 1028px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4em;
+
+
+  .brand-container {
+    display: flex;
+    align-items: center;
+
+    .blue-square {
+      background-color: #004a99;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+
+    .brand-name {
+      font-family: 'Avenir', sans-serif;
+      font-weight: 300;
+      font-size: 1.5rem;
+      color: #111111;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    .brand-name-profession {
+      font-size: 1rem;
+      color: #004a99;
+      font-weight: normal;
+    }
+  }
+  .brand-name, .brand-name-profession {
+    vertical-align: middle;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      flex: 1 1 auto;
+
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #004a99;
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      transition: color 0.3s;
+      font-size: calc(0.7rem + 0.1vw);
+
+      &:hover, &.active {
+        background-color: #004a99;
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
+}
