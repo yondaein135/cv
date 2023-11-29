@@ -1,16 +1,5 @@
-$timeline-width: 2px;
-$date-label-offset: 100px;
-$card-height: 200px;
-$card-margin-bottom: 20px;
-$card-vertical-center: $card-height / 2 - $card-margin-bottom / 2;
-$base-color: #004a99;
-
 .resume-container {
-  padding: 2rem;
-
   .resume-header {
-    text-align: center;
-
     .header-content {
       display: flex;
       align-items: center;
@@ -23,45 +12,26 @@ $base-color: #004a99;
       height: 25px;
       margin-right: 10px;
     }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
   }
 
   .section-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 2rem;
-
     section {
-      width: 80%;
       max-width: 800px;
-
-      h3 {
-        align-items: center;
-        font-size: 1.8rem;
-        display: inline-block;
-        position: relative;
-      }
     }
 
     .work-experience {
       .timeline-container {
         position: relative;
         display: flex;
-        align-items: flex-start;
       }
 
       .timeline-line {
         position: absolute;
         left: 10%;
         height: 100%;
-        width: $timeline-width;
+        width: 2px;
         background-color: #004a99;
       }
 
