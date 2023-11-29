@@ -1,4 +1,5 @@
 .resume-container {
+
   .resume-header {
     .header-content {
       display: flex;
@@ -17,7 +18,10 @@
   .section-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     section {
+      width: 80%;
       max-width: 800px;
     }
 
@@ -159,7 +163,7 @@
             z-index: 20;
             display: flex;
             align-items: flex-start;
-            justify-content: center; // This centers the text and image inside the button
+            justify-content: center;
             flex-direction: column;
 
             &.open {
@@ -171,22 +175,20 @@
             .skills-logos-container {
               display: flex;
               flex-wrap: wrap;
-              justify-content: center; // Center logos in the container
-              gap: 10px; // Space between logos
+              justify-content: center;
+              gap: 10px;
               .skill-logo {
-                width: calc(25% - 10px); // Adjust for 4 logos per row
+                width: calc(25% - 10px);
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
                 img {
-                  //max-width: 100%; // Ensure the image fits within the container
                   width: 100px;
                   height: 100px;
                 }
               }
             }
-
           }
         }
       }
@@ -194,28 +196,18 @@
 
     .education {
       .universities-container {
-
         display: flex;
-
         justify-content: center;
 
         .university-details-container {
           min-width: 100px;
-          align-items: center; // Center vertically
           text-align: center;
 
           margin-right: 50px;
           margin-left: 50px;
-          padding-right: 15px;
-          padding-left: 15px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
 
           .university-logo-link {
-            justify-content: center; // Center horizontally
-            align-items: center; // Center vertically
-
-
             .university-logo {
               width: 100px; // Fixed width for the image
               height: 100px; // Fixed height for the image
@@ -246,19 +238,16 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 1rem;
 
         .language {
           margin-bottom: 1rem;
 
           h4 {
             margin: 0;
-            font-size: 1.2rem;
             font-weight: bold;
           }
 
           .proficiency-bar {
-            width: 100%;
             height: 10px;
             background-color: #e0e0e0;
             border-radius: 5px;
@@ -294,28 +283,6 @@
 }
 
 .company-logo {
-  width: auto;
   max-width: 130px;
-  height: auto;
   max-height: 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  display: block;
 }
-
-
-@keyframes slideDown {
-  from {
-    transform: scaleY(0);
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    transform: scaleY(1);
-    height: auto;
-    opacity: 1;
-  }
-}
-
